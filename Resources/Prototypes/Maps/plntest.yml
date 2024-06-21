@@ -1,0 +1,17 @@
+- type: gameMap
+  id: plntest
+  mapName: plntest
+  mapPath: /Maps/plntest.yml
+  minPlayers: 0
+  maxPlayers: 100
+  stations:
+    Empty:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Empty"
+        - type: StationJobs
+          overflowJobs:
+            - Passenger
+          availableJobs:
+            Passenger: [ 6, 8 ]

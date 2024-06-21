@@ -83,3 +83,16 @@
   - Zombie
   - SimpleHostile
   - Dragon
+
+- type: npcFaction
+  id: Mechanoid
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Passive
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - Xeno
+  - SimpleNeutral
+  - SimpleHostile

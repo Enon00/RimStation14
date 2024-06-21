@@ -1151,6 +1151,21 @@
       Glass: 1
 
 - type: entity
+  parent: BaseMachineCircuitboard
+  id: OreFurnaceMachineCircuitboard
+  name: ore furnace machine board
+  components:
+  - type: Sprite
+    state: supply
+  - type: MachineBoard
+    prototype: OreFurnace
+    requirements:
+      MatterBin: 1
+      Manipulator: 1
+    materialRequirements:
+      Glass: 1
+
+- type: entity
   id: SheetifierMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: sheet-meister 2000 machine board

@@ -1,0 +1,149 @@
+- type: entity
+  name: Megascarab
+  id: MobInsectoid1
+  parent: SimpleSpaceMobBase
+  description: It appears to be some sort of beetle?
+  components:
+  - type: InputMover
+  - type: MobMover
+  - type: HTN
+    rootTask:
+      task: SimpleHostileCompound
+  - type: NpcFactionMember
+    factions:
+    - Xeno
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: alive
+      sprite: Mobs/Aliens/Insectoid/megascarab.rsi
+      scale: 0.8, 0.8
+  - type: Physics
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 4
+    baseSprintSpeed : 6
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.20
+        density: 20
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      15: Dead
+  - type: Stamina
+    critThreshold: 15
+  - type: MovementAlwaysTouching
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive
+      Dead:
+        Base: dead
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatXeno
+      amount: 1
+  - type: Bloodstream
+    bloodMaxVolume: 50
+  - type: CombatMode
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      groups:
+        Brute: 2
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        reagents:
+        - ReagentId: Toxin
+          Quantity: 3
+  - type: MeleeChemicalInjector
+    solution: melee
+  - type: ReplacementAccent
+    accent: genericAggressive
+  - type: Speech
+    speechVerb: SmallMob
+  - type: NonSpreaderZombie
+
+- type: entity
+  name: Spelopede
+  parent: MobXeno
+  id: MobInsectoid2
+  description: A worker drone of the hive, resembles a beetle
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Insectoid/spelopede.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Dead
+  - type: Stamina
+    critThreshold: 300
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      50: 0.7
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  name: Megaspider
+  parent: MobXeno
+  id: MobInsectoid3
+  description: A warrior of the hive, its size is formidable 
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Insectoid/megaspider.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: Stamina
+    critThreshold: 300
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      50: 0.7
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 400
+        mask:
+        - MobMask
+        layer:
+        - MobLayer

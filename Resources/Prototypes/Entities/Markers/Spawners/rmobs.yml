@@ -1,0 +1,41 @@
+- type: entity
+  name: Megascarab Spawner
+  id: SpawnMobInsectoid1
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: alive
+      sprite: Mobs/Aliens/Insectoids/megascarab.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobInsectoid1
+
+- type: entity
+  name: Spelopede Spawner
+  id: SpawnMobInsectoid2
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: alive
+      sprite: Mobs/Aliens/Insectoids/spelopede.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobInsectoid2
+
+- type: entity
+  name: Megaspider Spawner
+  id: SpawnMobInsectoid3
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: alive
+      sprite: Mobs/Aliens/Insectoids/megaspider.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobInsectoid3

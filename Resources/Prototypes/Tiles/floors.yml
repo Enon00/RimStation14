@@ -1830,7 +1830,7 @@
     East: /Textures/Tiles/Planet/Grass/double_edge.png
     North: /Textures/Tiles/Planet/Grass/double_edge.png
     West: /Textures/Tiles/Planet/Grass/double_edge.png
-  baseTurf: Plating
+  baseTurf: Space
   isSubfloor: false
   deconstructTools: [ Cutting ]
   footstepSounds:
@@ -1842,7 +1842,7 @@
   id: FloorMowedAstroGrass
   name: tiles-mowed-astro-grass
   parent: FloorGrass
-  baseTurf: Plating
+  baseTurf: Space
   isSubfloor: false
   deconstructTools: [ Cutting ]
   itemDrop: FloorTileItemMowedAstroGrass
@@ -1861,7 +1861,7 @@
   id: FloorAstroIce
   name: tiles-astro-ice
   sprite: /Textures/Tiles/Planet/Snow/ice.png
-  baseTurf: Plating
+  baseTurf: Space
   isSubfloor: false
   deconstructTools: [ Prying ]
   friction: 0.05
@@ -1875,7 +1875,7 @@
   id: FloorAstroSnow
   name: tiles-astro-snow
   parent: FloorSnow
-  baseTurf: Plating
+  baseTurf: Space
   isSubfloor: false
   deconstructTools: [ Prying ]
   itemDrop: FloorTileItemAstroSnow

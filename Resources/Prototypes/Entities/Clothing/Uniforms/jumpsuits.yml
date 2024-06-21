@@ -1461,3 +1461,14 @@
     sprite: Clothing/Uniforms/Jumpsuit/familiar_garbs.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/familiar_garbs.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitSynthread
+  name: synthread jumpsuit
+  description: attire made from synthetic fabric, it feels soft yet durable.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpsuit/synthread.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpsuit/synthread.rsi

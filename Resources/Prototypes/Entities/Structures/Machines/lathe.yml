@@ -1273,3 +1273,26 @@
     staticRecipes:
     - MaterialSheetMeat
     - SheetPaper
+
+- type: entity
+  parent: OreProcessor
+  id: OreFurnace
+  name: ore furnace
+  description: A primitive version of the ore processor.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/ore_furnace.rsi
+  - type: Machine
+    board: OreFurnaceMachineCircuitboard
+  - type: Lathe
+    materialUseMultiplier: 0.5
+    timeMultiplier: 2
+    staticRecipes:
+      - SheetSteel30
+      - SheetGlass30
+      - SheetPlasma30
+      - IngotGold30
+      - IngotSilver30
+
+
+

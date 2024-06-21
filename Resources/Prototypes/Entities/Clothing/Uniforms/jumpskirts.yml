@@ -926,3 +926,14 @@
       - state: equipped-INNERCLOTHING-jumpskirt
       - state: equipped-INNERCLOTHING-shirt
         color: "#b30000"
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtSynthread
+  name: synthread jumpskirt
+  description: attire made from synthetic fabric, it feels soft yet durable.
+  components:
+  - type: Sprite
+    sprite: Clothing/Uniforms/Jumpskirt/synthread.rsi
+  - type: Clothing
+    sprite: Clothing/Uniforms/Jumpskirt/synthread.rsi
