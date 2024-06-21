@@ -1,0 +1,83 @@
+- type: entity
+  name: Megascarab Spawner
+  id: SpawnMobInsectoid1
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: alive
+      sprite: Mobs/Aliens/Insectoid/megascarab.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobInsectoid1
+
+- type: entity
+  name: Spelopede Spawner
+  id: SpawnMobInsectoid2
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Mobs/Aliens/Insectoid/spelopede.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobInsectoid2
+
+- type: entity
+  name: Megaspider Spawner
+  id: SpawnMobInsectoid3
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Mobs/Aliens/Insectoid/megaspider.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobInsectoid3
+
+- type: entity
+  name: Lancer Spawner
+  id: SpawnMobMechLancerNPC
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Mobs/Aliens/Mech/lancer.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobMechLancerNPC
+
+- type: entity
+  name: Scyther Spawner
+  id: SpawnMobMechanoidsScytherNPC
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Mobs/Aliens/Mech/scyther.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobMechanoidsScytherNPC
+
+- type: entity
+  name: Centipede Spawner
+  id: SpawnMobMechCentipedeNPC
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: running
+      sprite: Mobs/Aliens/Mech/centipede.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - MobMechCentipedeNPC

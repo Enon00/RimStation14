@@ -1,0 +1,124 @@
+- type: entity
+  name: Centipede
+  parent: [ SimpleSpaceMobBase, FlyingMobBase, MobCombat ]
+  description: A heavy-plated machine gliding with hundreds of tiny insect legs, the thick carapace and firepower make it formidable.
+  id: MobMechCentipedeNPC
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Mech/centipede.rsi
+    offset: 0,0.3
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 1.5
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      500: Dead
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 1
+  - type: BasicEntityAmmoProvider
+    proto: CartridgeLightRifle
+    capacity: 15
+    count: 15
+  - type: Gun
+    fireRate: 4
+    useKey: false
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 235
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  name: Scyther
+  parent: [ SimpleSpaceMobBase, FlyingMobBase, MobCombat ]
+  description: A mobile machine with three sharp blades, cutting humanoids into pieces.
+  id: MobMechanoidsScytherNPC
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Mech/scyther.rsi
+    offset: 0,0.6
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 5
+  - type: Speech
+    speechVerb: Robotic
+  - type: MeleeWeapon
+    damage:
+     groups:
+       Brute: 25
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 235
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  name: Lancer
+  parent: [ SimpleSpaceMobBase, FlyingMobBase, MobCombat ]
+  description: Mechanoids specialised in anti-tank ammunition. 
+  id: MobMechLancerNPC
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Mobs/Aliens/Mech/lancer.rsi
+    offset: 0,0.3
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MovementSpeedModifier
+    baseSprintSpeed: 2
+  - type: Speech
+    speechVerb: Robotic
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 4
+  - type: BasicEntityAmmoProvider
+    proto: BulletAntiMateriel
+    capacity: 1
+    count: 1
+  - type: Gun
+    fireRate: 2
+    useKey: false
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 235
+        mask:
+        - MobMask
+        layer:
+        - MobLayer

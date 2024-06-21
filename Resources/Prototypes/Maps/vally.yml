@@ -1,0 +1,16 @@
+- type: gameMap
+  id: Vally
+  mapName: Vally
+  mapPath: /Maps/vally.yml
+  minPlayers: 0
+  stations:
+    Dev:
+      stationProto: StandardNanotrasenStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Dev"
+        - type: StationJobs
+          overflowJobs:
+          - Captain
+          availableJobs:
+            Passenger: [ -1, -1 ]

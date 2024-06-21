@@ -1,0 +1,18 @@
+- type: entity
+  parent: BaseItem
+  id: TechnologyComponent
+  name: Component
+  description: Various parts are used to make basic machines. It holds some information for researchers to use.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    layers:
+    - state: component
+      map: ["enum.DamageStateVisualLayers.Base"]
+    - state: component
+  - type: TechnologyDisk
+    points: 1500
+  - type: StaticPrice
+    price: 1000
+
+  
