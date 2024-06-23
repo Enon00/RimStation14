@@ -1,0 +1,11 @@
+- type: construction
+  name: medical pack
+  id: Cmedicalpack
+  graph: Gmedicalpack
+  startNode: start
+  targetNode: medicalpack
+  category: construction-category-misc
+  description: Combining Herbal packs with other ingredients allows for greater healing.
+  icon: { sprite: Rimstation14/Objects/Specific/Medical/medicalpack.rsi, state: medicalpack }
+  objectType: Item
+  

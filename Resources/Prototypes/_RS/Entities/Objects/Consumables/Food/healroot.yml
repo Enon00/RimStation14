@@ -1,0 +1,96 @@
+- type: entity
+  name: healroot berries
+  parent: FoodProduceBase
+  id: FoodHealrootBerries
+  description: Apprently healroot berries can clean toxic buildup.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - berry
+      - medicine
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 11
+        reagents:
+        - ReagentId: Dylovene
+          Quantity: 8
+        - ReagentId: Omnizine
+          Quantity: 3
+  - type: Sprite
+    sprite: _RS/Objects/Consumable/Food/healroot.rsi
+    state: healberries
+  - type: Produce
+    seedId: berries
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Dylovene
+        Quantity: 20
+  - type: Tag
+    tags:
+    - Fruit
+
+- type: entity
+  name: healroot
+  parent: FoodProduceBase
+  id: FoodHealoxygenRoot
+  description: This root is known for healing lungs but is outlawed due to its use in narcotics.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - sour
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: Inaprovaline
+          Quantity: 10
+        - ReagentId: SpaceDrugs
+          Quantity: 5
+  - type: Sprite
+    sprite: _RS/Objects/Consumable/Food/healroot.rsi
+    state: healroots
+  - type: Produce
+    seedId: berries
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Inaprovaline
+        Quantity: 20
+  - type: Tag
+    tags:
+    - Fruit
+
+- type: entity
+  name: healroot berries
+  parent: FoodProduceBase
+  id: FoodDeathrootBerries
+  description: Apprently healroot berries can clean toxic buildup.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - medicine
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 13
+        reagents:
+        - ReagentId: MindbreakerToxin
+          Quantity: 8
+        - ReagentId: Bungotoxin
+          Quantity: 5
+  - type: Sprite
+    sprite: _RS/Objects/Consumable/Food/healroot.rsi
+    state: healberries
+  - type: Produce
+    seedId: berries
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Dylovene
+        Quantity: 20
+  - type: Tag
+    tags:
+    - Fruit

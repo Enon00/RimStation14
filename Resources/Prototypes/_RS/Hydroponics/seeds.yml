@@ -1,0 +1,24 @@
+- type: seed
+  id: healroot
+  name: seeds-healroot-name
+  noun: seeds-noun-seeds
+  displayName: seeds-healroot-display-name
+  plantRsi: _RS/Objects/Specific/Hydroponics/healroot.rsi
+  packetPrototype: HealrootSeeds
+  productPrototypes:
+    - Herbalpack
+    - FoodHealoxygenRoot
+    - FoodHealrootBerries
+  lifespan: 25
+  maturation: 8
+  production: 4
+  yield: 3
+  potency: 1
+  idealLight: 8
+  growthStages: 3
+  waterConsumption: 0.60
+  chemicals:
+    Fiber:
+      Min: 5
+      Max: 10
+      PotencyDivisor: 20

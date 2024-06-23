@@ -1,0 +1,9 @@
+- type: entity
+  parent: SeedBase
+  name: packet of healroot seeds
+  id: HealrootSeeds
+  components:
+    - type: Seed
+      seedId: healroot
+    - type: Sprite
+      sprite: _RS/Objects/Specific/Hydroponics/healroot.rsi

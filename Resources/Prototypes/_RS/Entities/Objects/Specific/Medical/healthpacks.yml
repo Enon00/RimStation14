@@ -1,0 +1,102 @@
+- type: entity
+  parent: BaseHealingItem
+  id: Herbalpack
+  name: herbal pack
+  description: Healroot leaves that are good for cuts and burns.
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - Herbalpack
+  - type: Sprite
+    sprite: _RS/Objects/Specific/Medical/herbalpack.rsi
+    state: herbalpack
+  - type: Healing
+    damageContainers:
+    - Biological
+    damage:
+      groups: # these are all split across multiple types
+        Brute: -15
+        Burn: -15
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+
+- type: entity
+  parent: BaseHealingItem
+  id: MedicalPack
+  name: medical pack
+  description: useful for patching up wounds.
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - MedicalPack
+  - type: Sprite
+    sprite: _RS/Objects/Specific/Medical/medicalpack.rsi
+    state: medicalpack
+  - type: Construction
+    graph: Gmedicalpack
+    node: medicalpack
+  - type: Healing
+    damageContainers:
+    - Biological
+    damage:
+      groups: # these are all split across multiple types
+        Brute: -35
+        Burn: -35
+      bloodlossModifier: -10 # stop bleeding
+      delay: 1
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+  - type: Stack
+    stackType: MedicalPack
+    count: 10
+
+- type: entity
+  id: Medicalpack1
+  parent: MedicalPack
+  suffix: Single
+  components:
+  - type: Stack
+    stackType: MedicalPack
+    count: 1
+
+- type: entity
+  id: Medicalpack10Lingering
+  parent: MedicalPack
+  suffix: 10, Lingering
+  components:
+  - type: Stack
+    lingering: true
+    count: 10
+
+- type: entity
+  parent: BaseHealingItem
+  id: GLITPack
+  name: glitter-world medical pack
+  description: Medicine from a glitter-worlds, using nanites to heal wounds and burns.
+  suffix: Full
+  components:
+  - type: Tag
+    tags:
+    - MedicalPack
+  - type: Sprite
+    sprite: _RS/Objects/Specific/Medical/glitterworldpack.rsi
+    state: glit
+  - type: Healing
+    damageContainers:
+    - Biological
+    damage:
+      groups: # these are all split across multiple types
+        Brute: -75
+        Burn: -75
+      bloodlossModifier: -10 # stop bleeding
+      delay: 3
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"

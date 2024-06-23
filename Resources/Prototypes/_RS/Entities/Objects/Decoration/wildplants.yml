@@ -1,0 +1,137 @@
+- type: entity
+  id: WilHealRoot
+  name: wild healroot
+  description: wild-healroot, the miracle plant of survivalists.
+  components:
+    - type: Clickable
+    - type: Sprite
+      sprite: _RS/Objects/Specific/Hydroponics/healroot.rsi
+      state: harvest
+    - type: Physics
+      bodyType: Static
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: Wood
+    - type: MeleeSound
+      soundGroups:
+        Brute:
+          path: /Audio/Effects/plant_rustle.ogg
+          params:
+            variation: 0.05
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 5
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/Effects/plant_rustle.ogg
+                params:
+                  volume: 5
+                  variation: 0.05
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                Herbalpack:
+                  min: 1
+                  max: 2
+                FoodHealoxygenRoot:
+                  min: 0
+                  max: 1
+                FoodHealrootBerries:
+                  min: 0
+                  max: 1
+                HealrootSeeds:
+                  min: 0
+                  max: 1
+                FoodDeathrootBerries:
+                  min: 0
+                  max: 1
+
+- type: entity
+  id: WilWheat
+  name: wild wheat
+  description: we can make bread with it.
+  components:
+    - type: Clickable
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/wheat.rsi
+      state: harvest
+    - type: Physics
+      bodyType: Static
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: Wood
+    - type: MeleeSound
+      soundGroups:
+        Brute:
+          path: /Audio/Effects/plant_rustle.ogg
+          params:
+            variation: 0.05
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 5
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/Effects/plant_rustle.ogg
+                params:
+                  volume: 5
+                  variation: 0.05
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                WheatBushel:
+                  min: 4
+                  max: 6
+                WheatSeeds:
+                  min: 1
+                  max: 2
+
+- type: entity
+  id: WilCotton
+  name: wild cotton
+  description: A moth delicacy.
+  components:
+    - type: Clickable
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/cotton.rsi
+      state: harvest
+    - type: Physics
+      bodyType: Static
+    - type: Damageable
+      damageContainer: Inorganic
+      damageModifierSet: Wood
+    - type: MeleeSound
+      soundGroups:
+        Brute:
+          path: /Audio/Effects/plant_rustle.ogg
+          params:
+            variation: 0.05
+    - type: Destructible
+      thresholds:
+        - trigger:
+            !type:DamageTrigger
+            damage: 5
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/Effects/plant_rustle.ogg
+                params:
+                  volume: 5
+                  variation: 0.05
+            - !type:DoActsBehavior
+              acts: [ "Destruction" ]
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                CottonBol:
+                  min: 2
+                  max: 4
+                CottonSeeds:
+                  min: 0
+                  max: 1

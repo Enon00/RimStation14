@@ -1,0 +1,18 @@
+- type: constructionGraph
+  id: Gmedicalpack
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: medicalpack
+      steps:
+      - tag: Herbalpack
+        name: herbal pack
+        icon: 
+         sprite: Objects/Specific/Medical/medical.rsi
+         state: herbalpack
+      - material: Cloth
+        amount: 2
+        doAfter: 10
+  - node: medicalpack
+    entity: Medicalpack1
