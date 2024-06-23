@@ -20,7 +20,7 @@
   - type: SolutionContainerManager
     solutions:
       pool:
-        maxVol: 9999999 #.inf seems to break the whole yaml file, but would definitely be preferable. 
+        maxVol: 9999999 #.inf seems to break the whole yaml file, but would definitely be preferable.
         reagents:
         - ReagentId: Water
           Quantity: 9999999
@@ -35,6 +35,14 @@
   - type: SpeedModifierContacts
     walkSpeedModifier: 0.5
     sprintSpeedModifier: 0.5
+  - type: Drink
+    delay: 1
+    examinable: true
+    forcefeeddelay: 3
+    solution: pool
+    transferamount: 5
+    usesound:
+      path: /Audio/Items/drink.ogg
   - type: Physics
     bodyType: Static
   - type: Fixtures
